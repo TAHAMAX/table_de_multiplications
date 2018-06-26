@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table de multiplications</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" >
+	<script src="jquery-2.2.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="multiplications.css">
+
+							<style>
+						     table, th, td {
+						    border: 10px solid black;
+						    border-collapse: collapse;
+						}
+						</style>
+</head>
+<body>
+    <h1 class="table" style="font-size: 50px">table de multiplications</h1>
+          <button id="rest" class="table">REST</button>
+
+    <h1 id="rows"  class="table">rows "multiplications" cells </h1>
+    <h1 id="cells"  class="table">cells "multiplications" rows </h1>
+
+ 		<table id="myTable"  style="width:100% "  class="table">
+
+				<tr >
+						<th></th>
+						<th>0</th>
+						<th>1</th>
+						<th>2</th>
+				</tr>
+				<tr >
+						<th>0</th><th></th><th></th><th></th>
+				</tr >
+				<tr >
+						<th>1</th><th></th><th></th><th></th>
+				</tr>
+				<tr >
+						<th>2</th><th></th><th></th><th></th>
+				</tr>
+		</table>
+
+		 <div id="button"  style="width:100% text-align: center" class="table">
+				<button id="A" class="button">*</button>
+				<button id="B" class="button">/</button>
+				<button id="C" class="button">+</button>
+				<button id="D" class="button">-</button>
+				<button id="CC" class="button">C</button>
+		 </div>
+
+		 <div id="button2"  style="width:100% text-align: center" class="table">
+				<button id="A2" class="button">*</button>
+				<button id="B2" class="button">/</button>
+				<button id="C2" class="button">+</button>
+				<button id="D2" class="button">-</button>
+				<button id="CC2" class="button">C</button>
+ 		</div>
+
+
+
+  <script >
+  	$(document).ready(function()
+	{ 
+
+
+	             $("#button").hide();
+	          	 $("#button2").hide();
+
+		        $("#rows").click(function()
+				{
+					     $("#cells").hide(2000);
+						 $("#button").show();
+						 $("#button2").hide();
+				});
+				 $("#cells").click(function()
+				{
+						$("#rows").hide(2000);  
+					    $("#button2").show();
+	                    $("#button").hide();
+
+
+				});
+		                var a= $("#myTable tr:eq(0) th:eq(0)").html();
+						var b= $("#myTable tr:eq(0) th:eq(1)").html();
+						var c= $("#myTable tr:eq(0) th:eq(2)").html();
+						var d= $("#myTable tr:eq(0) th:eq(3)").html();
+
+						var e= $("#myTable tr:eq(1) th:eq(0)").html();
+						var f= $("#myTable tr:eq(1) th:eq(1)").html();
+						var g= $("#myTable tr:eq(1) th:eq(2)").html();
+						var h= $("#myTable tr:eq(1) th:eq(3)").html();
+
+						var i= $("#myTable tr:eq(2) th:eq(0)").html();
+						var g= $("#myTable tr:eq(2) th:eq(1)").html();
+						var k= $("#myTable tr:eq(2) th:eq(2)").html();
+						var l= $("#myTable tr:eq(2) th:eq(3)").html();
+
+						var m= $("#myTable tr:eq(3) th:eq(0)").html();
+						var n= $("#myTable tr:eq(3) th:eq(1)").html();
+						var o= $("#myTable tr:eq(3) th:eq(2)").html();
+						var p= $("#myTable tr:eq(3) th:eq(3)").html(); 
+
+		$("#A").click(function()
+				{
+
+					    $("#myTable tr:eq(0) th:eq(0)").html("*");
+                         
+		              	$("#myTable tr:eq(1) th:eq(1)").html(e * b);
+						$("#myTable tr:eq(1) th:eq(2)").html(e * c);
+						$("#myTable tr:eq(1) th:eq(3)").html(e * d);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(i * b);
+						$("#myTable tr:eq(2) th:eq(2)").html(i * c);
+						$("#myTable tr:eq(2) th:eq(3)").html(i * d);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(m * b);
+						$("#myTable tr:eq(3) th:eq(2)").html(m * c);
+						$("#myTable tr:eq(3) th:eq(3)").html(m * d);
+		            
+                         
+		               
+
+ 				}); 
+		$("#B").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("/");
+
+
+ 
+                        $("#myTable tr:eq(1) th:eq(1)").html(e / b);
+						$("#myTable tr:eq(1) th:eq(2)").html(e / c);
+						$("#myTable tr:eq(1) th:eq(3)").html(e / d);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(i / b);
+						$("#myTable tr:eq(2) th:eq(2)").html(i / c);
+						$("#myTable tr:eq(2) th:eq(3)").html(i / d);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(m / b);
+						$("#myTable tr:eq(3) th:eq(2)").html(m / c);
+						$("#myTable tr:eq(3) th:eq(3)").html(m / d);
+		             
+				});
+		$("#C").click(function()
+				{
+
+                        $("#myTable tr:eq(0) th:eq(0)").html("+");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html(e + b);
+						$("#myTable tr:eq(1) th:eq(2)").html(e + c);
+						$("#myTable tr:eq(1) th:eq(3)").html(e + d);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(i + b);
+						$("#myTable tr:eq(2) th:eq(2)").html(i + c);
+						$("#myTable tr:eq(2) th:eq(3)").html(i + d);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(m + b);
+						$("#myTable tr:eq(3) th:eq(2)").html(m + c);
+						$("#myTable tr:eq(3) th:eq(3)").html(m + d) 
+		              	
+				});
+		$("#D").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("-");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html(e - b);
+						$("#myTable tr:eq(1) th:eq(2)").html(e - c);
+						$("#myTable tr:eq(1) th:eq(3)").html(e - d);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(i - b);
+						$("#myTable tr:eq(2) th:eq(2)").html(i - c);
+						$("#myTable tr:eq(2) th:eq(3)").html(i - d);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(m - b);
+						$("#myTable tr:eq(3) th:eq(2)").html(m - c);
+						$("#myTable tr:eq(3) th:eq(3)").html(m - d);
+				});
+		$("#CC").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("C");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html("");
+						$("#myTable tr:eq(1) th:eq(2)").html("");
+						$("#myTable tr:eq(1) th:eq(3)").html("");
+
+						$("#myTable tr:eq(2) th:eq(1)").html("");
+						$("#myTable tr:eq(2) th:eq(2)").html("");
+						$("#myTable tr:eq(2) th:eq(3)").html("");
+
+						$("#myTable tr:eq(3) th:eq(1)").html("");
+						$("#myTable tr:eq(3) th:eq(2)").html("");
+						$("#myTable tr:eq(3) th:eq(3)").html("");
+				});
+		$("#A2").click(function()
+				{
+
+					    $("#myTable tr:eq(0) th:eq(0)").html("*");
+                         
+		              	$("#myTable tr:eq(1) th:eq(1)").html(b * e);
+						$("#myTable tr:eq(1) th:eq(2)").html(c * e);
+						$("#myTable tr:eq(1) th:eq(3)").html(d * e);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(b * i);
+						$("#myTable tr:eq(2) th:eq(2)").html(c * i);
+						$("#myTable tr:eq(2) th:eq(3)").html(d * i);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(b * m);
+						$("#myTable tr:eq(3) th:eq(2)").html(b * m);
+						$("#myTable tr:eq(3) th:eq(3)").html(b * m);
+		            
+                         
+		               
+
+ 				}); 
+		$("#B2").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("/");
+
+
+ 
+                        $("#myTable tr:eq(1) th:eq(1)").html(b / e);
+						$("#myTable tr:eq(1) th:eq(2)").html(c / e);
+						$("#myTable tr:eq(1) th:eq(3)").html(d/ e);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(b/ i);
+						$("#myTable tr:eq(2) th:eq(2)").html(c/ i);
+						$("#myTable tr:eq(2) th:eq(3)").html(d/ i);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(b / m);
+						$("#myTable tr:eq(3) th:eq(2)").html(c / m);
+						$("#myTable tr:eq(3) th:eq(3)").html(d / m);
+		             
+				});
+		$("#C2").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("+");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html(b + e);
+						$("#myTable tr:eq(1) th:eq(2)").html(c + e);
+						$("#myTable tr:eq(1) th:eq(3)").html(d + e);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(b + i);
+						$("#myTable tr:eq(2) th:eq(2)").html(c + i);
+						$("#myTable tr:eq(2) th:eq(3)").html(d + i);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(b + m);
+						$("#myTable tr:eq(3) th:eq(2)").html(c + m);
+						$("#myTable tr:eq(3) th:eq(3)").html(d + m);
+		              	
+				});
+		$("#D2").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("-");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html(b - e);
+						$("#myTable tr:eq(1) th:eq(2)").html(c - e);
+						$("#myTable tr:eq(1) th:eq(3)").html(d - e);
+
+						$("#myTable tr:eq(2) th:eq(1)").html(b - i);
+						$("#myTable tr:eq(2) th:eq(2)").html(c - i);
+						$("#myTable tr:eq(2) th:eq(3)").html(d - i);
+
+						$("#myTable tr:eq(3) th:eq(1)").html(b - m);
+						$("#myTable tr:eq(3) th:eq(2)").html(c - m);
+						$("#myTable tr:eq(3) th:eq(3)").html(d - m);
+				});
+		$("#CC2").click(function()
+				{
+					    $("#myTable tr:eq(0) th:eq(0)").html("C");
+
+                        $("#myTable tr:eq(1) th:eq(1)").html("");
+						$("#myTable tr:eq(1) th:eq(2)").html("");
+						$("#myTable tr:eq(1) th:eq(3)").html("");
+
+						$("#myTable tr:eq(2) th:eq(1)").html("");
+						$("#myTable tr:eq(2) th:eq(2)").html("");
+						$("#myTable tr:eq(2) th:eq(3)").html("");
+
+						$("#myTable tr:eq(3) th:eq(1)").html("");
+						$("#myTable tr:eq(3) th:eq(2)").html("");
+						$("#myTable tr:eq(3) th:eq(3)").html("");
+				});
+		$("#rest").click(function()
+                 {location.reload();
+				});
+	});  				
+
+  </script>
+</body>
+</html>
